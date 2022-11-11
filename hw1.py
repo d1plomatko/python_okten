@@ -7,9 +7,11 @@
 
 st = 'as 23 fdfdg544'
 
+# numbers = []
 # for num in st:
 #     if num.isdigit():
-#         print(num)
+#         numbers.append(num)
+# print(','.join(numbers))
 
 # #################################################################################
 # 2)написати прогу яка вибирає зі введеної строки числа і виводить їх
@@ -20,13 +22,15 @@ st = 'as 23 fdfdg544'
 
 st2 = 'as 23 fdfdg544 34'
 
-# for word in st2.split():
-#     num = ''
-#     for item in word:
-#         if item.isdigit():
-#             num = num + item
-#
-#     print(num)
+numbers = []
+
+for word in st2.split():
+    num = ''
+    for item in word:
+        if item.isdigit():
+            num = num + item
+    numbers.append(num)
+print(','.join(numbers).lstrip(','))
 
 
 # #################################################################################
@@ -40,16 +44,17 @@ st2 = 'as 23 fdfdg544 34'
 
 greeting = 'Hello, world'
 
-# print(list(greeting.upper()))
+# l1 = [letter.upper() for letter in greeting]
+# print(l1)
 
 # 2) з диапозону від 0-50 записати тільки не парні числа при цьому піднести їх до квадрату
 # приклад:
 # [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, ...]
 #
 
-l = [i ** 2 for i in range(50) if i % 2 != 0]
+l2 = [i ** 2 for i in range(50) if i % 2 != 0]
 
-# print(l)
+# print(l2)
 
 # function
 #
@@ -187,12 +192,12 @@ while True:
     print('5. Вивести таблицю')
     print('6. Вихід')
 
-    num = int(input('Вкажіть число: '))
-    if num == 1:
+    num = input('Вкажіть число: ')
+    if num == '1':
         print(min(list))
-    elif num == 2:
+    elif num == '2':
         print(set(list))
-    elif num == 3:
+    elif num == '3':
         count = 3
 
         while count < len(list):
@@ -200,9 +205,9 @@ while True:
             count += 4
 
         print(list)
-    elif num == 4:
+    elif num == '4':
         square(10)
-    elif num == 5:
+    elif num == '5':
         i = 1
         while i < 10:
             print([i * num for num in range(1, 10)])
