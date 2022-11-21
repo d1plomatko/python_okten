@@ -140,25 +140,24 @@ class Magazine(Printable):
 
 
 class Main:
-    _printable_list: list[Book, Magazine, ...] = []
+    _printable_list: list[Magazine | Book] = []
 
     @classmethod
-    def add(cls, element):
-        if type(element) == Book or type(element) == Magazine:
+    def add(cls, element: Magazine | Book):
+        if isinstance(element, (Book, Magazine)):
             cls._printable_list.append(element)
 
     @classmethod
     def show_all_magazines(cls):
         for item in cls._printable_list:
-            if type(item) == Magazine:
+            if isinstance(item, Magazine):
                 item.print()
 
     @classmethod
     def show_all_books(cls):
         for item in cls._printable_list:
-            if type(item) == Book:
+            if isinstance(item, Book):
                 item.print()
-
 
 # Main.add(Magazine('Magazine1'))
 # Main.add(Magazine('Magazine2'))

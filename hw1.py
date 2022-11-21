@@ -32,7 +32,6 @@ for word in st2.split():
     numbers.append(num)
 print(','.join(numbers).lstrip(','))
 
-
 # #################################################################################
 #
 # list comprehension
@@ -176,41 +175,41 @@ def square(num):
 
 # 3) вывести табличку множення за допомогою цикла while
 
-# i = 1
-# while i < 10:
-#     print([i * num for num in range(1, 10)])
-#     i += 1
+i = 1
+while i < 10:
+    print(' '.join([f'{(i * num): 3}' for num in range(1, 10)]))
+    i += 1
 
 # 4) переробити це завдання під меню
 #
 
-while True:
-    print('1. Знайти мінімільне число')
-    print('2. Видалити усі дублікати')
-    print('3. Замінити кожне 4 значення на х')
-    print('4. Вивести квадрат')
-    print('5. Вивести таблицю')
-    print('6. Вихід')
-
-    num = input('Вкажіть число: ')
-    if num == '1':
-        print(min(list))
-    elif num == '2':
-        print(set(list))
-    elif num == '3':
-        count = 3
-
-        while count < len(list):
-            list[count] = 'x'
-            count += 4
-
-        print(list)
-    elif num == '4':
-        square(10)
-    elif num == '5':
-        i = 1
-        while i < 10:
-            print([i * num for num in range(1, 10)])
-            i += 1
-    else:
-        break
+# while True:
+#     print('1. Знайти мінімільне число')
+#     print('2. Видалити усі дублікати')
+#     print('3. Замінити кожне 4 значення на х')
+#     print('4. Вивести квадрат')
+#     print('5. Вивести таблицю')
+#     print('6. Вихід')
+#
+#     num = input('Вкажіть число: ')
+#     if num == '1':
+#         print(min(list))
+#     elif num == '2':
+#         print(set(list))
+#     elif num == '3':
+#         count = 3
+#
+#         while count < len(list):
+#             list[count] = 'x'
+#             count += 4
+#
+#         print(list)
+#     elif num == '4':
+#         square(10)
+#     elif num == '5':
+#         i = 1
+#         while i < 10:
+#             print([i * num for num in range(1, 10)])
+#             i += 1
+#     else:
+#         break
